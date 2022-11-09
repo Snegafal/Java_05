@@ -2,7 +2,7 @@
 // возвращает бОльшее значение.
 
 public class BiggerValue {
-    public int getBiggerValueOutOfTwoNumbers (int number1, int number2) {
+    public static int getBiggerValueOutOfTwoNumbers (int number1, int number2) {
         if (number1 >= number2) {
 
             return number1;
@@ -10,4 +10,9 @@ public class BiggerValue {
 
         return number2;
     }
+
+    public static void main(String[] args) {
+        System.out.println(getBiggerValueOutOfTwoNumbers(4545, 767));
+    }
+
 }
