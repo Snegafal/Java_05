@@ -1,3 +1,5 @@
+package openWeather;
+
 //На сайте openWeather.com найдите в документации названия городов
 // на языках, которые поддерживаются в запросах (geocoding).
 // Найдите и скопируйте, как называется город Лондон на языках
@@ -20,16 +22,26 @@
 
 
 public class HTTPRequest {
-    String greek = "Λονδίνο";
-    String persian = "لندن";
-    String hindi = "लंदन";
-    String french = "Londres";
-    String english = "London";
+    String cityGreek = "Λονδίνο";
+    String cityPersian = "لندن";
+    String cityHindi = "लंदन";
+    String cityFrench = "Londres";
+    String cityEnglish = "London";
 
-    String apiKey = "4d2055e52f8dedbce377c3206d2931cc";
-
+     String apiKey = "4d2055e52f8dedbce377c3206d2931cc";
 
     public String createRequest (String cityName, String apiKey) {
-        return "https://api.openweathermap.org/data/2.5/weather?q=London&appid=4d2055e52f8dedbce377c3206d2931cc&lang=ru";
+        String request = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName
+                + "&appid=" + apiKey;
+
+        return request;
+    }
+
+    public void printRequestsInDifferentLanguages () {
+        System.out.println(createRequest(cityGreek, apiKey));
+        System.out.println(createRequest(cityPersian, apiKey));
+        System.out.println(createRequest(cityFrench, apiKey));
+        System.out.println(createRequest(cityHindi, apiKey));
+        System.out.println(createRequest(cityEnglish, apiKey));
     }
 }
