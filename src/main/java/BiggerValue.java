@@ -10,7 +10,4 @@ public class BiggerValue {
 
         return number2;
     }
-    public static void main(String[] args) {
-        System.out.println(getBiggerValueOutOfTwoNumbers(87, 0));
-    }
 }
